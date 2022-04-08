@@ -8,14 +8,44 @@
     <li class="nav-item">
       <a class="nav-link " href="/Mahasiswa">
         <i class="far fa-circle nav-icon"></i>
-        <p>List Mahasiswa</p>
+        <p>Cycle Count</p>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/Mahasiswa/create">
         <i class="far fa-circle nav-icon"></i>
-        <p>Tambah Mahasiswa</p>
+        <p>Bin Location</p>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/Mahasiswa/create">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Items</p>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/Mahasiswa/create">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Item Type</p>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/Mahasiswa/create">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Item Category</p>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/Mahasiswa/create">
+        <i class="far fa-circle nav-icon"></i>
+        <p>User</p>
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="/Mahasiswa/create">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Role</p>
+          </a>
+      </li>
   </ul>
