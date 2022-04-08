@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 Route::resource('admin/item-type', 'App\Http\Controllers\Admin\ItemTypeController');
-Route::resource('admin/item-category', 'App\Http\Controllers\Admin\ItemCategoryController');
-Route::resource('admin/item-category', 'App\Http\Controllers\Admin\ItemCategoryController');
 Route::resource('admin/role', 'App\Http\Controllers\Admin\RoleController');
 Route::resource('admin/item-category', 'App\Http\Controllers\Admin\ItemCategoryController');
+Route::resource('admin/items', 'App\Http\Controllers\Admin\ItemsController');

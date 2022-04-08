@@ -18,7 +18,7 @@
         </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href={{ asset("/Mahasiswa/create") }}>
+      <a class="nav-link" href={{ asset("admin/items") }}>
         <i class="far fa-circle nav-icon"></i>
         <p>Items</p>
         </a>
