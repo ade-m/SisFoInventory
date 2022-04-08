@@ -198,7 +198,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-                 @include('layout.navbarmenu')
+                 @include('layouts.sidebarmenu')
           </li>
         </ul>
       </nav>
@@ -249,7 +249,7 @@
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  @include('layout.footer')
+  @include('layouts.footer')
 </div>
 <!-- ./wrapper -->
 
