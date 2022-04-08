@@ -1,13 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.adminLTE')
 
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Itemtype</div>
+                    <div class="card-header">Item type</div>
                     <div class="card-body">
                         <a href="{{ url('/admin/item-type/create') }}" class="btn btn-success btn-sm" title="Add New ItemType">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

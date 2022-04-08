@@ -24,7 +24,7 @@
         </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/Mahasiswa/create">
+      <a class="nav-link" href="admin/item-type">
         <i class="far fa-circle nav-icon"></i>
         <p>Item Type</p>
         </a>
