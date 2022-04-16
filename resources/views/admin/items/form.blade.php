@@ -10,7 +10,7 @@
 </div>
 <div class="form-group {{ $errors->has('item_type') ? 'has-error' : ''}}">
     <label for="item_type" class="control-label">{{ 'Item Type' }}</label>
-    <input class="form-control" name="item_type" type="text" id="item_type" value="{{ isset($item->item_type) ? $item->item_type : ''}}" >
+    <input class="form-control" name="item_type"  type="text" id="item_type" value="{{ isset($item->item_type) ? $item->item_type : ''}}" >
     {!! $errors->first('item_type', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('item_category') ? 'has-error' : ''}}">

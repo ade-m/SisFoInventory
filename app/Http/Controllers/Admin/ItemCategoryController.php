@@ -7,6 +7,7 @@ use App\Http\Requests;
 
 use App\Models\ItemCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ItemCategoryController extends Controller
 {
@@ -50,12 +51,22 @@ class ItemCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $requestData = $request->all();
-        
-        ItemCategory::create($requestData);
+        //VALIDASI
+        $validator = Validator::make($request->all(), [
+            'code' => 'required|min:5|max:20',
+            'description' => 'required|max:255',
+            ]);
+        if ($validator->fails()) { //jika ada eror validasi
+            return redirect('admin/item-category')->withErrors($validator);
+        } else {
+             //PROSES SIMPAN DATA
+            $requestData = $request->all();
+            
+            ItemCategory::create($requestData);
 
-        return redirect('admin/item-category')->with('flash_message', 'ItemCategory added!');
+            return redirect('admin/item-category')->with('flash_message', 'ItemCategory added!');
+        }
+      
     }
 
     /**
