@@ -7,6 +7,7 @@ use App\Http\Requests;
 
 use App\Models\ItemType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ItemTypeController extends Controller
 {
@@ -50,12 +51,21 @@ class ItemTypeController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $requestData = $request->all();
-        
-        ItemType::create($requestData);
+                //VALIDASI
+                $validator = Validator::make($request->all(), [
+                    'code' => 'required|min:5|max:20',
+                    'description' => 'required|max:255',
+                    ]);
+                if ($validator->fails()) { //jika ada eror validasi
+                    return redirect('admin/item-type')->withErrors($validator);
+                } else {
+                     //PROSES SIMPAN DATA
+                    $requestData = $request->all();
+                    
+                    ItemType::create($requestData);
 
-        return redirect('admin/item-type')->with('flash_message', 'ItemType added!');
+                    return redirect('admin/item-type')->with('flash_message', 'ItemType added!');
+                }
     }
 
     /**
