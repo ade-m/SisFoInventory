@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
-Route::resource('admin/item-type', 'App\Http\Controllers\Admin\ItemTypeController');
-Route::resource('admin/role', 'App\Http\Controllers\Admin\RoleController');
-Route::resource('admin/item-category', 'App\Http\Controllers\Admin\ItemCategoryController');
-Route::resource('admin/items', 'App\Http\Controllers\Admin\ItemsController');
+Route::resource('admin/item-type', 'App\Http\Controllers\Admin\ItemTypeController')->middleware('auth');
+Route::resource('admin/role', 'App\Http\Controllers\Admin\RoleController')->middleware('auth');
+Route::resource('admin/item-category', 'App\Http\Controllers\Admin\ItemCategoryController')->middleware('auth');
+Route::resource('admin/items', 'App\Http\Controllers\Admin\ItemsController')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
